@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: golang-telepresence-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: golang-telepresence-service
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8081
+    

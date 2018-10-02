@@ -1,0 +1,16 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: golang-telepresence-service
+spec:
+  replicas: 1
+  template:
+    metadata: {labels: {app: golang-telepresence-service}}
+    spec:
+      containers:
+      - name: golang-telepresence-service
+        image: smartinrub/golang-telepresence-service
+        imagePullPolicy: Always
+        command:
+        ports:
+          - containerPort: 8081
