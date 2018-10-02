@@ -13,7 +13,6 @@ func main() {
 	router.Run(":8081")
 }
 
-// SetupRouter creates endpoint for bcrypt
 func SetupRouter() *gin.Engine {
 	r := gin.Default()
 
